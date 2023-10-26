@@ -14,7 +14,16 @@ def encoder(password):
     return new_pass
 
 def decoder(password):
-    pass
+    new_password = ""
+    for num in password:
+        val = int(num)
+        val -= 3
+        if val <= 0:
+            val += 10
+        new_password += str(val)
+    return new_password
+
+
 
 new_pass = ''
 decoder_run = True
